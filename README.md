@@ -1,16 +1,15 @@
-"# artemis-use-case" 
+## Use case 4 and Test case 1
 
-Projects cpp for use case 4 e test case 1:
-
-tickerplan-prd2
-tickerplan-cns-ticker2
+Project sources:
+tickerplan-prd2 (producer)
+tickerplan-cns-ticker2 (consumer ticker queue)
 tickerplan-cns-lvq
 
-Use case filtri con proton
+## Use case filters with library proton
 
-push-srv-proton-cns
-push-srv-proton-prd
+push-srv-proton-cns (consumer)
+push-srv-proton-prd (producer)
 
-Use case filtri con libreria CMS
+## Use case filtri con libreria CMS
 
 
