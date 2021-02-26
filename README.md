@@ -1,3 +1,25 @@
+##  Test case  LVQ + Retention + Prefetch = 1
+
+Project sources:
+>push-srv-prd  
+>push-srv-cns  
+
+Broker configuration:
+```
+<address-setting match="PUSHSRV.MULTICAST">
+  <retroactive-message-count>1000000</retroactive-message-count>
+  <default-last-value-key>MESSAGE_KEY</default-last-value-key>
+</address-setting>
+```
+
+Run files:
+>start producer to address PUSHSRV.MULTICAST:  
+>./bin-sh/push-srv-prd.sh  
+
+>start consumer from temporary queue  
+>./bin-sh/push-srv-cns.sh  
+
+
 ## Test Case LVQ / Consumer.PrefetchSize=1 or 100
 
 Project sources:
@@ -29,26 +51,7 @@ For simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 100)
 >start consumer from TICKERqueue:
 >./bin-sh/tickerplan-cns-TICKERPLAN-TICKER.sh
 
-##  Test case  LVQ + Retention + Prefetch = 1
 
-Project sources:
->push-srv-prd  
->push-srv-cns  
-
-Broker configuration:
-```
-<address-setting match="PUSHSRV.MULTICAST">
-  <retroactive-message-count>1000000</retroactive-message-count>
-  <default-last-value-key>MESSAGE_KEY</default-last-value-key>
-</address-setting>
-```
-
-Run files:
->start producer to address  PUSHSRV.MULTICAST:
->./bin-sh/push-srv-prd.sh 
-
->start consumer from temporary queue 
->./bin-sh/push-srv-cns.sh
 
 
 ## Use case filters using library qpid-proton-0.33.0
