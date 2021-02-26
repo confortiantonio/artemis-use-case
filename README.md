@@ -32,8 +32,8 @@ For simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 100)
 ##  Test case  LVQ + Retention + Prefetch = 1
 
 Project sources:
->./bin-sh/push-srv-prd  
->./bin-sh/push-srv-cns  
+>push-srv-prd  
+>push-srv-cns  
 
 Broker configuration:
 ```
