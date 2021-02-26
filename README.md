@@ -1,4 +1,4 @@
-## Test Case 1 (LVQ / Consumer.PrefetchSize=1 or 100 )
+## Test Case LVQ / Consumer.PrefetchSize=1 or 100
 
 Project sources:
 >tickerplan-prd2  
