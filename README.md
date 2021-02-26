@@ -15,25 +15,25 @@ Broker configuration use case 4:
 ```
 Run files:
 >start producer :
->./bin/tickerplan-prd-brk_7.8.0.sh 
+>./bin-sh/tickerplan-prd-brk_7.8.0.sh 
 
 For simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 1)
 
 >start consumer from LVQ queue:
->./bin/tickerplan-cns-TICKERPLAN-LVQ-prefetch-1.sh
+>./bin-sh/tickerplan-cns-TICKERPLAN-LVQ-prefetch-1.sh
 
 For simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 100)
 >start consumer from LVQ queue:
->./bin/tickerplan-cns-TICKERPLAN-LVQ-prefetch-1.sh
+>./bin-sh/tickerplan-cns-TICKERPLAN-LVQ-prefetch-1.sh
 
 >start consumer from TICKERqueue:
->./bin/tickerplan-cns-TICKERPLAN-TICKER.sh
+>./bin-sh/tickerplan-cns-TICKERPLAN-TICKER.sh
 
 ##  Test case  LVQ + Retention + Prefetch = 1
 
 Project sources:
->./bin/push-srv-prd  
->./bin/push-srv-cns  
+>./bin-sh/push-srv-prd  
+>./bin-sh/push-srv-cns  
 
 Broker configuration:
 ```
@@ -45,10 +45,10 @@ Broker configuration:
 
 Run files:
 >start producer to address  PUSHSRV.MULTICAST:
->./bin/push-srv-prd.sh 
+>./bin-sh/push-srv-prd.sh 
 
 >start consumer from temporary queue 
->./bin/push-srv-cns.sh
+>./bin-sh/push-srv-cns.sh
 
 
 ## Use case filters using library qpid-proton-0.33.0
@@ -69,7 +69,7 @@ Broker configuration
 Run files:
 
 >start producer :
->./bin/push-srv-proton-prd.sh
+>./bin-sh/push-srv-proton-prd.sh
 
 >start consumer: 
->./bin/push-srv-proton-cns.sh
+>./bin-sh/push-srv-proton-cns.sh
