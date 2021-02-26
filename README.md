@@ -1,10 +1,10 @@
-## Use case 4 
+## Test Case 1 (LVQ / Consumer.PrefetchSize=1 or 100 )
 
 Project sources:
 >tickerplan-prd2  
 >tickerplan-cns-ticker2 
 
-Broker configuration:
+Broker configuration use case 4:
 ```
 <address name="TICKERPLAN">
     <multicast>
@@ -20,14 +20,14 @@ Run files:
 For simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 1)
 
 >start consumer from LVQ queue:
->./bin/tickerplan-cns-TICKERPLAN::LVQ-prefetch-1.sh
+>./bin/tickerplan-cns-TICKERPLAN-LVQ-prefetch-1.sh
 
 For simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 100)
 >start consumer from LVQ queue:
->./bin/tickerplan-cns-TICKERPLAN::LVQ-prefetch-1.sh
+>./bin/tickerplan-cns-TICKERPLAN-LVQ-prefetch-1.sh
 
 >start consumer from TICKERqueue:
->./bin/tickerplan-cns-TICKERPLAN::TICKER.sh
+>./bin/tickerplan-cns-TICKERPLAN-TICKER.sh
 
 ##  Test case  LVQ + Retention + Prefetch = 1
 
@@ -51,18 +51,25 @@ Run files:
 >./bin/push-srv-cns.sh
 
 
-## Use case filters using library proton
+## Use case filters using library qpid-proton-0.33.0
 
 Project sources:
 >push-srv-proton-cns (consumer)  
-push-srv-proton-prd (producer)  
+>push-srv-proton-prd (producer)  
+
+Broker configuration
+```
+<address name="SELECTOR">
+            <multicast>
+               <queue name="QUEUE.SEL" />
+            </multicast>
+ </address>
+```
 
 Run files:
->
 
-## Use case filters using library CMS
-Project sources:
->
+>start producer :
+>./bin/push-srv-proton-prd.sh
 
-Run files:
->
+>start consumer: 
+>./bin/push-srv-proton-cns.sh
