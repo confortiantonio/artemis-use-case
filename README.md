@@ -39,17 +39,15 @@ Run files:
 >start producer :
 >./bin-sh/tickerplan-prd-brk_7.8.0.sh 
 
-For simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 1)
+To simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 1)
 
 >start consumer from LVQ queue:
 >./bin-sh/tickerplan-cns-TICKERPLAN-LVQ-prefetch-1.sh
 
-For simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 100)
+To simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 100)
 >start consumer from LVQ queue:
->./bin-sh/tickerplan-cns-TICKERPLAN-LVQ-prefetch-1.sh
+>./bin-sh/tickerplan-cns-TICKERPLAN-LVQ-prefetch-100.sh
 
->start consumer from TICKERqueue:
->./bin-sh/tickerplan-cns-TICKERPLAN-TICKER.sh
 
 
 
