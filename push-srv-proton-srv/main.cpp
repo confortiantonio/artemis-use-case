@@ -1,4 +1,3 @@
-//export LD_LIBRARY_PATH=/sviluppo/repo-git/prometheus-cpp/_build/deploy/usr/local/lib64:/sviluppo/repo-git/qpid-proton-0.33.0/build/cpp
 #include "options.hpp"
 #include "Util.h"
 
@@ -96,49 +95,16 @@ public:
             message.properties().put("MESSAGE_KEY", msgKey);
             message.properties().put("SUBJECT", subject);
             sender.send(message);
-        }
-
-        /*{
-            proton::message message = proton::message(BODY + getThreadId());
-            proton::scalar writeTime = proton::scalar(epochInMicro());
-            proton::scalar msgNumber = proton::scalar((long)count);
-            message.properties().put("HEADER_WriteTimeMicro", writeTime);
-            message.properties().put("MESSAGE_NUMBER", msgNumber);
-            message.properties().put("MESSAGE_KEY", "1");
-            message.properties().put("SUBJECT", "cmf.quote.2.id");
-            sender.send(message);
-        }
-
-        {
-            proton::message message = proton::message(BODY + getThreadId());
-            proton::scalar writeTime = proton::scalar(epochInMicro());
-            proton::scalar msgNumber = proton::scalar((long)count);
-            message.properties().put("HEADER_WriteTimeMicro", writeTime);
-            message.properties().put("MESSAGE_NUMBER", msgNumber);
-            message.properties().put("MESSAGE_KEY", "2");
-            message.properties().put("SUBJECT", "cmf.quote.3.id");
-            sender.send(message);
-        }
-
-        {
-            proton::message message = proton::message(BODY + getThreadId());
-            proton::scalar writeTime = proton::scalar(epochInMicro());
-            proton::scalar msgNumber = proton::scalar((long)count);
-            message.properties().put("HEADER_WriteTimeMicro", writeTime);
-            message.properties().put("MESSAGE_NUMBER", msgNumber);
-            message.properties().put("MESSAGE_KEY", "1000");
-            message.properties().put("SUBJECT", "bv.order.2.id");
-            sender.send(message);
-        }*/
+        }        
 
         ready = false;
-        std::cout << "msgNumber " << count << std::endl;
+        std::cout << "msgNumber " << count << " msgKey " << count % 3 << std::endl;
     }
 };
 
 
 int main(int argc, char** argv) {
-    std::string address("127.0.0.1:61616/SELECTOR");
+    std::string address("127.0.0.1:61616/TICKERPLAN");
     double interval = 1.0;
     double timeout = 1.0;
 

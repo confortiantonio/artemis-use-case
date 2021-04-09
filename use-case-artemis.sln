@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "push-srv-proton-cns", "push
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proton-receiver-acknowledge", "proton-receiver-acknowledge\proton-receiver-acknowledge.vcxproj", "{84B90C54-A21F-43A6-980A-C9046BC77D88}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proton-tickerplan-cns", "proton-tickerplan-cns\proton-tickerplan-cns.vcxproj", "{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -431,6 +433,30 @@ Global
 		{84B90C54-A21F-43A6-980A-C9046BC77D88}.Release|x86.ActiveCfg = Release|x86
 		{84B90C54-A21F-43A6-980A-C9046BC77D88}.Release|x86.Build.0 = Release|x86
 		{84B90C54-A21F-43A6-980A-C9046BC77D88}.Release|x86.Deploy.0 = Release|x86
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|ARM.ActiveCfg = Debug|ARM
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|ARM.Build.0 = Debug|ARM
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|ARM.Deploy.0 = Debug|ARM
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|ARM64.Build.0 = Debug|ARM64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|x64.ActiveCfg = Debug|x64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|x64.Build.0 = Debug|x64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|x64.Deploy.0 = Debug|x64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|x86.ActiveCfg = Debug|x86
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|x86.Build.0 = Debug|x86
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Debug|x86.Deploy.0 = Debug|x86
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|ARM.ActiveCfg = Release|ARM
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|ARM.Build.0 = Release|ARM
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|ARM.Deploy.0 = Release|ARM
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|ARM64.ActiveCfg = Release|ARM64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|ARM64.Build.0 = Release|ARM64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|ARM64.Deploy.0 = Release|ARM64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|x64.ActiveCfg = Release|x64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|x64.Build.0 = Release|x64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|x64.Deploy.0 = Release|x64
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|x86.ActiveCfg = Release|x86
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|x86.Build.0 = Release|x86
+		{949C0CC4-AA5C-48B5-B0E4-11DF512E6B37}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
