@@ -20,7 +20,7 @@ Run files:
 >./bin-sh/push-srv-cns.sh  
 
 
-## Test Case 1 (LVQ / Consumer.PrefetchSize= 1 or 100)
+## Test Case 1 - CMS consumer (LVQ / Consumer.PrefetchSize= 1 or 100)
 
 Project sources:
 >tickerplan-prd2  
@@ -49,6 +49,27 @@ To simulate Test Case 1 (LVQ / Consumer.PrefetchSize = 100)
 >./bin-sh/tickerplan-cns-TICKERPLAN-LVQ-prefetch-100.sh
 
 
+## Test Case 1 - Proton consumer
+
+Project sources:
+>tickerplan-prd2  
+>proton-tickerplan-cns 
+
+Broker configuration use case 4:
+```
+<address name="TICKERPLAN">
+    <multicast>
+       <queue name="LVQ" last-value-key="MESSAGE_KEY" non-destructive="true"/>
+       <queue name="TICKER" />
+    </multicast>
+</address>
+```
+Run files:
+>start producer :
+>./bin-sh/tickerplan-prd-brk_7.8.0.sh
+
+>start consumer from LVQ queue:
+>./bin-sh/proton-tickerplan-cns.sh
 
 
 
